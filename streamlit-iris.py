@@ -19,7 +19,7 @@ st.set_page_config(
 st.title('🌷 Simple Prediction App')
 
 # Load dataset
-df = pd.read_csv('iris.csv')
+df = pd.read_csv('Iris.csv')
 
 # Input widgets
 st.sidebar.subheader('Input features')
@@ -29,7 +29,7 @@ petal_length = st.sidebar.slider('Petal length', 1.0, 6.9, 3.8)
 petal_width = st.sidebar.slider('Petal width', 0.1, 2.5, 1.2)
 
 # Separate to X and y
-X = df.drop('Species', axis=1)
+X = df.drop(['Id', 'Species'], axis=1)
 y = df.Species
 
 # Data splitting
